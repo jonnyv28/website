@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<link rel="icon" href="https://good360.org/wp-content/uploads/2025/02/cropped-cropped-Good360-Icon-32x32-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://good360.org/wp-content/uploads/2025/02/cropped-cropped-Good360-Icon-32x32-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://good360.org/wp-content/uploads/2025/02/cropped-cropped-Good360-Icon-32x32-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://good360.org/wp-content/uploads/2025/02/cropped-cropped-Good360-Icon-32x32-1-270x270.png" />
+<meta name='robots' content='noindex, follow' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO Premium plugin v23.4 (Yoast SEO v25.8) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Page not found - Good360</title>
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Page not found - Good360" />
+	<meta property="og:site_name" content="Good360" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://good360.org/#website","url":"https://good360.org/","name":"Good360","description":"Goods for the Greater Good","publisher":{"@id":"https://good360.org/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://good360.org/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://good360.org/#organization","name":"Good360","url":"https://good360.org/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://good360.org/#/schema/logo/image/","url":"https://good360.org/wp-content/uploads/2020/11/Good360-Logo-500x.jpg","contentUrl":"https://good360.org/wp-content/uploads/2020/11/Good360-Logo-500x.jpg","width":500,"height":500,"caption":"Good360"},"image":{"@id":"https://good360.org/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/Good360.org"],"description":"Good360’s mission is to close the need gap to open opportunity for all. We live in a world of plenty, yet millions of people ﬁnd themselves in critical need every day, creating a vast need gap. At Good360, we are on a mission to close that gap. We know there’s more than enough to go around. That’s why we work to get donated goods to where they can do the most good, to close the need gap. When we close the gap, we open opportunity: for donors and nonproﬁts to better serve their communities, for communities to become more resilient and for us all to create less waste. But most of all, we help people to reach their boundless potential.","email":"general@good360.org","telephone":"(703) 836-2121","foundingDate":"1983-11-01","numberOfEmployees":{"@type":"QuantitativeValue","minValue":"51","maxValue":"200"}}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//unpkg.com' />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/good360.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.2"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://good360.org/wp-includes/css/dist/block-library/style.min.css?ver=6.8.2' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio :where(figcaption){color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed :where(figcaption){color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote:where(.has-text-align-right){border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote:where(.has-text-align-center){border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote:where(.is-style-plain){border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table :where(figcaption){color:#ffffffa6}.wp-block-video :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video :where(figcaption){color:#ffffffa6}.wp-block-video{margin:0 0 1em}:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<link rel='stylesheet' id='dashicons-css' href='https://good360.org/wp-includes/css/dashicons.min.css?ver=6.8.2' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--life-green: #8CC641;--wp--preset--color--secondary: #14B8A6;--wp--preset--color--dark: #1F2937;--wp--preset--color--neutral: #C3C4C4;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 0.875rem;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 1.125rem;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--regular: 1.5rem;--wp--preset--font-size--xl: 1.25rem;--wp--preset--font-size--xxl: 1.5rem;--wp--preset--font-size--xxxl: 1.875rem;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 960px;--wp--style--global--wide-size: 1280px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-life-green-color{color: var(--wp--preset--color--life-green) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-dark-color{color: var(--wp--preset--color--dark) !important;}.has-neutral-color{color: var(--wp--preset--color--neutral) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-life-green-background-color{background-color: var(--wp--preset--color--life-green) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-dark-background-color{background-color: var(--wp--preset--color--dark) !important;}.has-neutral-background-color{background-color: var(--wp--preset--color--neutral) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-life-green-border-color{border-color: var(--wp--preset--color--life-green) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-dark-border-color{border-color: var(--wp--preset--color--dark) !important;}.has-neutral-border-color{border-color: var(--wp--preset--color--neutral) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-regular-font-size{font-size: var(--wp--preset--font-size--regular) !important;}.has-xl-font-size{font-size: var(--wp--preset--font-size--xl) !important;}.has-xxl-font-size{font-size: var(--wp--preset--font-size--xxl) !important;}.has-xxxl-font-size{font-size: var(--wp--preset--font-size--xxxl) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='swiper-css-css' href='https://good360.org/wp-content/themes/good360/css/vendor/swiper-bundle.min.css?ver=1.0.22' type='text/css' media='all' />
+<link rel='stylesheet' id='good360-css-css' href='https://good360.org/wp-content/themes/good360//css/app.css?id=3d4cab92972f10153c32fdd9bec2118a&#038;ver=1.0.22' type='text/css' media='all' />
+<style id='block-visibility-screen-size-styles-inline-css' type='text/css'>
+/* Large screens (desktops, 992px and up) */
+@media ( min-width: 992px ) {
+	.block-visibility-hide-large-screen {
+		display: none !important;
+	}
+}
+
+/* Medium screens (tablets, between 768px and 992px) */
+@media ( min-width: 768px ) and ( max-width: 991.98px ) {
+	.block-visibility-hide-medium-screen {
+		display: none !important;
+	}
+}
+
+/* Small screens (mobile devices, less than 768px) */
+@media ( max-width: 767.98px ) {
+	.block-visibility-hide-small-screen {
+		display: none !important;
+	}
+}
+</style>
+<link rel='stylesheet' id='myStyleSheets-css' href='https://good360.org/wp-content/plugins/wp-latest-posts/css/wplp_front.css?ver=5.0.11' type='text/css' media='all' />
+<!--n2css--><!--n2js--><script type="text/javascript" id="jquery-core-js-extra">
+/* <![CDATA[ */
+var aagb_local_object = {"ajax_url":"https:\/\/good360.org\/wp-admin\/admin-ajax.php","nonce":"75a8fcff43","licensing":"","assets":"https:\/\/good360.org\/wp-content\/plugins\/advanced-accordion-block\/assets\/"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://good360.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://good360.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://good360.org/wp-content/themes/good360/js/vendor/jquery-ui-custom.min.js?ver=1.0.22" id="good360-jquery-ui-js-js"></script>
+<script type="text/javascript" src="https://good360.org/wp-content/themes/good360/js/vendor/swiper-bundle.min.js?ver=1.0.22" id="swiper-js-js"></script>
+<script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?ver=1.0.22" id="isotope-js-js"></script>
+<script type="text/javascript" id="good360-js-js-extra">
+/* <![CDATA[ */
+var good360_ajax_obj = {"ajax_url":"https:\/\/good360.org\/wp-admin\/admin-ajax.php","nonce":"37a43b69e9"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://good360.org/wp-content/themes/good360//js/app.js?id=9002d6ab6713f27211c9052101cdaed3&amp;ver=1.0.22" id="good360-js-js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K76PKBV9');</script>
+<!-- End Google Tag Manager -->
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{613900472894961}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{v10.0}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Podscribe pixel -->
+    <script>
+    (function (w, d) {
+        var id = 'podscribe-capture',
+        n = 'script';
+        var e = d.createElement(n);
+        e.id = id;
+        e.async = true;
+        e.src = 'https://d34r8q7sht0t9k.cloudfront.net/tag.js';
+        var s = d.getElementsByTagName(n)[0];
+        s.parentNode.insertBefore(e, s);
+        e.addEventListener('load', function() {
+          w.podscribe('init', {
+            user_id: 'e57161e7-790c-4707-80c0-40a21e8f161e',
+            advertiser: 'societyetcusd'
+          });
+          w.podscribe('view');
+        })
+      })(window, document);
+    </script>
+<!-- /Podscribe pixel -->
+
+<script type="text/javascript" src="https://secure.barn5bake.com/js/259389.js"></script>
+<noscript><img src="https://secure.barn5bake.com/259389.png" style="display:none;" /></noscript>
+
+<!-- wp:social-links --><ul class="wp-block-social-links"><!-- wp:social-link {"url":"https://gravatar.com/press67f8a9b589","service":"chain","label":"test","rel":"me"} /--></ul><!-- /wp:social-links -->
+
+<!-- Fundraise Up: the new standard for online giving --> 
+<script>(function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track,openCheckout' 
+.split(','),i,o=function(n){return'function'==typeof n?o.l.push([arguments])&&o 
+:function(){return o.l.push([n,arguments])&&o}},t=d.getElementsByTagName(s)[0], 
+j=d.createElement(s);j.async=!0;j.src='https://cdn.fundraiseup.com/widget/'+a+''; 
+t.parentNode.insertBefore(j,t);o.s=Date.now();o.v=5;o.h=w.location.href;o.l=[]; 
+for(i=0;i<8;i++)o[l[i]]=o(l[i]);w[n]=o} 
+})(window,document,'script','FundraiseUp','ACAFKKCC');</script> 
+<!-- End Fundraise Up --> 
+
+ <!-- Hotjar Tracking Code for https://good360.org/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6483967,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>		<style type="text/css" id="wp-custom-css">
+			.page-id-104903 .post-password-form {
+  margin-top: 200px; /* Adjust based on header height */
+  position: relative;
+  z-index: 10;
+}
+
+.page-id-104903 .post-password-form input[type="password"] {
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 16px;
+}
+
+.page-id-104903 .post-password-form input[type="password"]:focus {
+  border-color: #00aa55; /* optional: green highlight when active */
+  box-shadow: 0 0 5px rgba(0, 170, 85, 0.3);
+}
+
+
+.swiper-blog .swiper-slide img {
+	max-width: 25%;
+} 
+article.type-post li {
+	list-style-position: inside;
+	padding-left: .5rem;
+	margin: .3rem 0;
+	list-style: disc;
+	
+}
+article.type-post ul {
+	margin-left: 1rem;
+}
+
+.entry-content p a {
+	text-decoration: underline;
+	color: blue;
+}
+
+@media(min-width: 768px) {
+	.efforts-card-h-200 {
+		height:	226px;
+	}
+}
+
+.n2-ss-animated-heading-i {
+    font-family: Laylin !important;
+}
+
+.n2-ss-animated-heading-i ss-word {
+    border-bottom: 10px solid white;
+	font-size: 8rem !important;
+	color: #1D171F;
+}
+
+@media (max-width: 1199px) {
+	
+.n2-ss-animated-heading-i ss-word {
+	font-size: 4rem !important;űborder-bottom: 6px solid white;
+}
+}
+
+@media (max-width: 700px) {
+	
+.n2-ss-animated-heading-i ss-word {
+	font-size: 2rem !important;
+	border-bottom: 2px solid white;
+}
+}
+@media (max-width: 768px) {
+  /* Target the Smart Slider #18 wrapper */
+  #n2-ss-18 {
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  /* Target the slider track that holds all the slides */
+  #n2-ss-18 .n2-ss-slider-1 {
+    overflow: visible !important;
+    display: flex !important;
+    justify-content: center;
+  }
+
+  /* Target individual slides */
+  #n2-ss-18 .n2-ss-slide {
+    width: 85% !important;
+    margin: 0 10px !important;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Signup Form Styles ===== */
+.signup-form-section {
+  background-color: #8CC641 !important; /* green background */
+  padding: 40px 30px !important;
+  max-width: 1000px !important;
+  margin: -30px auto -40px auto !important; /* negative bottom margin overlaps footer */
+ box-shadow: 0 8px 8px -4px rgba(0,0,0,0.25) !important;
+  font-family: "Proxima Nova", Arial, sans-serif !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* Apply font to everything inside */
+.signup-form-section * {
+  font-family: "Proxima Nova", Arial, sans-serif !important;
+}
+
+/* Headings */
+.signup-form-section h1,
+.signup-form-section h2,
+.signup-form-section h3 {
+  font-size: 26px !important;
+  margin-bottom: 10px !important;
+  font-weight: 700 !important;
+}
+
+/* Paragraph / subtext */
+.signup-form-section p {
+  margin-bottom: 20px !important;
+  font-size: 16px !important;
+}
+
+/* Form layout */
+.signup-form-section form {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+}
+
+/* Input fields */
+.signup-form-section input[type="text"],
+.signup-form-section input[type="email"] {
+  padding: 10px !important;
+  font-size: 16px !important;
+  flex: 1 !important;
+  min-width: 200px !important;
+  border: 1px solid #ccc !important;
+}
+
+/* Submit button */
+.signup-form-section input[type="submit"],
+.signup-form-section button {
+  background-color: #1976d2 !important; /* blue */
+  color: #fff !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  border-radius: 20px !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+}
+
+.signup-form-section input[type="submit"]:hover,
+.signup-form-section button:hover {
+  background-color: #125a9e !important;
+	
+}
+
+body.home footer#colophon {
+  padding-top: 7rem !important;
+}
+
+/* Navigation container */
+.section-nav {
+  background-color: #8CC641;  /* your brand green */
+  padding: 0.5rem 1rem;
+}
+
+/* Make list horizontal by default (desktop) */
+.section-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;   /* space between links */
+  margin: 0;
+  padding: 0;
+}
+
+/* Stack links vertically on smaller screens */
+@media (max-width: 768px) {
+  .section-nav ul {
+    display: block;      /* stack vertically */
+  }
+
+  .section-nav ul li {
+    margin-bottom: 0.5rem; /* add spacing between links */
+  }
+}
+
+/* Default links */
+.section-nav a {
+  color: black !important;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+/* Hover (desktop only, won’t break mobile) */
+.section-nav a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Active/current page */
+.section-nav a.active {
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 3px solid black;
+}
+
+/* Tap feedback (mobile & desktop) */
+.section-nav a:active {
+  color: #333;
+
+}
+		</style>
+		</head>
+<body class="antialiased">
+	<div class="md:flex min-h-screen">
+		<div class="w-full md:w-1/2 flex items-center justify-center">
+			<div class="max-w-sm m-8">
+				<div class="text-5xl md:text-15xl text-gray-800 border-primary border-b">404</div>
+				<div class="w-16 h-1 bg-purple-light my-3 md:my-6"></div>
+				<p class="text-gray-800 text-2xl md:text-3xl font-light mb-8">Sorry, the page you are looking for could not be found.</p>
+				<a href="https://good360.org" class="bg-primary px-4 py-2 rounded text-white">
+					Go Home				</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
