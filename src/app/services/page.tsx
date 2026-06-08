@@ -38,7 +38,7 @@ export default function Services() {
       <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-blue-600 font-medium uppercase tracking-wide text-sm mb-4">VENEGAS LOGISTICS SERVICES</p>
+            <p className="text-blue-600 font-medium uppercase tracking-wide text-sm mb-4">JV LOGISTICS GROUP SERVICES</p>
             <h1 className="text-5xl font-bold text-gray-900 mb-4">Professional 3PL Solutions</h1>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               Comprehensive logistics services tailored to your business needs. From storage to fulfillment, we've got you covered.

@@ -1,6 +1,6 @@
 # 🚀 Start Here — Setup Guide
 
-This is your Venegas Logistics website, cleaned up and ready to manage with
+This is your JV Logistics Group website, cleaned up and ready to manage with
 **Claude Code**, hosted on **GitHub**, and published live by **Vercel**.
 
 You don't need to memorize anything technical. The trick is: once Claude Code
@@ -32,7 +32,7 @@ When Claude Code opens, it will ask which folder to work in. That's the next ste
 
 ## Step 2 — Put this project in a folder
 
-1. Unzip this project somewhere easy to find, e.g. `Documents/venegas-website`.
+1. Unzip this project somewhere easy to find, e.g. `Documents/jv-logistics-website`.
 2. In Claude Code, open that folder (it'll prompt you, or you point it there).
 
 ---

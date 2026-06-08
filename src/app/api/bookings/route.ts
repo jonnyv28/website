@@ -124,11 +124,11 @@ export async function POST(request: NextRequest) {
         await resend.emails.send({
           from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
           to: email,
-          subject: "Booking Confirmation - Venegas Logistics",
+          subject: "Booking Confirmation - JV Logistics Group",
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
               <div style="background: #2563eb; padding: 20px; text-align: center;">
-                <h1 style="color: white; margin: 0;">Venegas Logistics</h1>
+                <h1 style="color: white; margin: 0;">JV Logistics Group</h1>
               </div>
               <div style="padding: 30px; background: #f9fafb;">
                 <h2 style="color: #1f2937;">Booking Confirmation</h2>
@@ -164,10 +164,10 @@ export async function POST(request: NextRequest) {
                   </table>
                 </div>
                 <p style="color: #4b5563;">Our team will contact you shortly to confirm your booking and provide next steps.</p>
-                <p style="color: #4b5563;">If you have any questions, please contact us at support@venegaslogistics.com</p>
+                <p style="color: #4b5563;">If you have any questions, please contact us at support@jvlogisticsgroup.com</p>
               </div>
               <div style="background: #1f2937; padding: 20px; text-align: center;">
-                <p style="color: #9ca3af; margin: 0; font-size: 12px;">© 2025 Venegas Logistics LLC. All Rights Reserved.</p>
+                <p style="color: #9ca3af; margin: 0; font-size: 12px;">© 2025 JV Logistics Group LLC. All Rights Reserved.</p>
                 <p style="color: #9ca3af; margin: 5px 0 0; font-size: 12px;">2001 N 23rd Ave, Phoenix, AZ 85009</p>
               </div>
             </div>
@@ -177,7 +177,7 @@ export async function POST(request: NextRequest) {
         // Send notification to admin
         await resend.emails.send({
           from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
-          to: process.env.ADMIN_EMAIL || "admin@venegaslogistics.com",
+          to: process.env.ADMIN_EMAIL || "admin@jvlogisticsgroup.com",
           subject: `New Booking - ${firstName} ${lastName}`,
           html: `
             <div style="font-family: Arial, sans-serif;">

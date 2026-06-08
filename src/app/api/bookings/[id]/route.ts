@@ -106,18 +106,18 @@ export async function PATCH(
         const statusMessages: Record<string, string> = {
           confirmed: "Your booking has been confirmed! We look forward to serving you.",
           cancelled: "Your booking has been cancelled. If you have any questions, please contact us.",
-          completed: "Your booking has been completed. Thank you for choosing Venegas Logistics!",
+          completed: "Your booking has been completed. Thank you for choosing JV Logistics Group!",
         };
 
         if (statusMessages[status]) {
           await resend.emails.send({
             from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
             to: booking.email,
-            subject: `Booking ${status.charAt(0).toUpperCase() + status.slice(1)} - Venegas Logistics`,
+            subject: `Booking ${status.charAt(0).toUpperCase() + status.slice(1)} - JV Logistics Group`,
             html: `
               <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
                 <div style="background: #2563eb; padding: 20px; text-align: center;">
-                  <h1 style="color: white; margin: 0;">Venegas Logistics</h1>
+                  <h1 style="color: white; margin: 0;">JV Logistics Group</h1>
                 </div>
                 <div style="padding: 30px; background: #f9fafb;">
                   <h2 style="color: #1f2937;">Booking Update</h2>

@@ -16,12 +16,12 @@ Create a file named `.env.local` in the `boxzooka-blue` folder with:
 
 ```env
 RESEND_API_KEY=re_paste_your_key_here
-CONTACT_EMAIL=your-email@venegaslogistics.com
+CONTACT_EMAIL=your-email@jvlogisticsgroup.com
 ```
 
 Replace:
 - `re_paste_your_key_here` with your actual Resend API key
-- `your-email@venegaslogistics.com` with where you want to receive inquiries
+- `your-email@jvlogisticsgroup.com` with where you want to receive inquiries
 
 ## ✅ Step 3: Test It! (1 minute)
 
@@ -40,7 +40,7 @@ Replace:
 ## 📝 What Emails Look Like
 
 You'll receive beautifully formatted emails with:
-- Professional blue Venegas Logistics branding
+- Professional blue JV Logistics Group branding
 - All customer details (name, company, phone, email)
 - Their service interest (Storage, Crossdocking, etc.)
 - Their message
@@ -60,14 +60,14 @@ When you deploy your site, make sure to add these environment variables to your 
 
 ## ✨ Bonus: Custom Email Address
 
-Want emails to come FROM `contact@venegaslogistics.com`?
+Want emails to come FROM `contact@jvlogisticsgroup.com`?
 
 1. In Resend, go to **Domains**
-2. Add `venegaslogistics.com`
+2. Add `jvlogisticsgroup.com`
 3. Add the DNS records they provide
 4. Add to `.env.local`:
    ```env
-   RESEND_FROM_EMAIL=contact@venegaslogistics.com
+   RESEND_FROM_EMAIL=contact@jvlogisticsgroup.com
    ```
 
 ---

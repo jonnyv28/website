@@ -5,7 +5,7 @@ export function Logo({ className = "" }: { className?: string }) {
     <div className={className}>
       <Image
         src="/venegas-logo.png"
-        alt="VENEGAS LOGISTICS"
+        alt="JV LOGISTICS GROUP"
         width={1200}
         height={400}
         className="h-full w-auto object-contain"

@@ -22,10 +22,10 @@ The contact form is **ready to send emails** via Resend! Just add your API key t
 RESEND_API_KEY=re_your_actual_api_key_here
 
 # Required: Where form submissions should be sent
-CONTACT_EMAIL=your-email@venegaslogistics.com
+CONTACT_EMAIL=your-email@jvlogisticsgroup.com
 
 # Optional: Custom "from" address (requires domain verification)
-# RESEND_FROM_EMAIL=contact@venegaslogistics.com
+# RESEND_FROM_EMAIL=contact@jvlogisticsgroup.com
 ```
 
 ### Step 3: Test It!
@@ -45,15 +45,15 @@ Your contact form now sends **beautifully formatted HTML emails** with:
 
 ## Advanced: Custom Domain Email
 
-To send emails from `contact@venegaslogistics.com` instead of `onboarding@resend.dev`:
+To send emails from `contact@jvlogisticsgroup.com` instead of `onboarding@resend.dev`:
 
 1. In Resend dashboard, go to **Domains**
 2. Click **Add Domain**
-3. Enter `venegaslogistics.com`
+3. Enter `jvlogisticsgroup.com`
 4. Follow the DNS setup instructions
 5. Once verified, update `.env.local`:
    ```env
-   RESEND_FROM_EMAIL=contact@venegaslogistics.com
+   RESEND_FROM_EMAIL=contact@jvlogisticsgroup.com
    ```
 
 ## Troubleshooting

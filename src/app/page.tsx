@@ -41,12 +41,12 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Left Side - Hero Content */}
             <div className="flex flex-col justify-center">
-              <p className="text-blue-600 font-medium uppercase tracking-wide text-sm mb-4">VENEGAS LOGISTICS 3PL FULFILLMENT</p>
+              <p className="text-blue-600 font-medium uppercase tracking-wide text-sm mb-4">JV LOGISTICS GROUP 3PL FULFILLMENT</p>
               <h1 className="text-5xl font-bold text-gray-900 mb-2">Storage. Done.</h1>
               <h1 className="text-5xl font-bold text-blue-600 mb-2">Crossdocking. Complete.</h1>
               <h1 className="text-5xl font-bold text-gray-900 mb-6">Fulfillment. Now.</h1>
               <p className="text-gray-600 mb-8 text-lg">
-                VENEGAS LOGISTICS is a 3PL Logistics Company That Focuses On Storage, Crossdocking, And Fulfillment. We make it easy. Reserve a lane now.
+                JV LOGISTICS GROUP is a 3PL Logistics Company That Focuses On Storage, Crossdocking, And Fulfillment. We make it easy. Reserve a lane now.
               </p>
 
               {/* Geometric 3D Box */}
@@ -104,7 +104,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-blue-600 font-medium uppercase tracking-wide text-sm mb-4">VENEGAS LOGISTICS BOOKING SYSTEM</p>
+            <p className="text-blue-600 font-medium uppercase tracking-wide text-sm mb-4">JV LOGISTICS GROUP BOOKING SYSTEM</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Book Your Storage Lane Online</h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               Just like booking a plane ticket, reserve your storage lanes instantly with our simple online booking system
@@ -163,7 +163,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <p className="text-blue-100 uppercase tracking-wide text-sm mb-4">VENEGAS LOGISTICS 3PL FULFILLMENT</p>
+            <p className="text-blue-100 uppercase tracking-wide text-sm mb-4">JV LOGISTICS GROUP 3PL FULFILLMENT</p>
             <h2 className="text-4xl font-bold mb-4">Where Is Our Merchandise? Take A Look At How We Store Your Freight.</h2>
             <p className="text-blue-100 text-lg max-w-3xl mx-auto">
               Time is money in ecommerce. Our proven fulfillment solutions help you ship faster, reduce errors, and deliver on customer expectations every time.
@@ -174,7 +174,7 @@ export default function Home() {
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Venegas Logistics Facility Tour"
+                title="JV Logistics Group Facility Tour"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
@@ -193,7 +193,7 @@ export default function Home() {
             <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
               <img
                 src="https://ugc.same-assets.com/YpqDWkBo4SS09PujpdNEjct5dBVM5OIT.jpeg"
-                alt="Venegas Logistics warehouse storage lanes with organized pallets"
+                alt="JV Logistics Group warehouse storage lanes with organized pallets"
                 className="w-full h-auto"
               />
             </div>
@@ -211,7 +211,7 @@ export default function Home() {
       <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-blue-600 font-medium uppercase tracking-wide text-sm mb-4">VENEGAS LOGISTICS SERVICES</p>
+            <p className="text-blue-600 font-medium uppercase tracking-wide text-sm mb-4">JV LOGISTICS GROUP SERVICES</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Professional 3PL Solutions</h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">Comprehensive logistics services tailored to your business needs</p>
           </div>
@@ -385,7 +385,7 @@ export default function Home() {
             <div className="relative overflow-hidden rounded-lg aspect-video shadow-lg">
               <img
                 src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&auto=format&fit=crop"
-                alt="Venegas Logistics team distributing supplies to the community from truck"
+                alt="JV Logistics Group team distributing supplies to the community from truck"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -393,7 +393,7 @@ export default function Home() {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">We Give Back</h2>
                 <p className="text-gray-600 mb-6">
-                  We are committed to being empathetic and helpful to each other, our clients and our communities. These commitments include regular events within the company that recognize employees' efforts at giving back and being servant leaders. Every quarter VENEGAS LOGISTICS picks a charity or a cause to volunteer or to contribute.
+                  We are committed to being empathetic and helpful to each other, our clients and our communities. These commitments include regular events within the company that recognize employees' efforts at giving back and being servant leaders. Every quarter JV LOGISTICS GROUP picks a charity or a cause to volunteer or to contribute.
                 </p>
                 <Link href="#" className="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700">
                   Learn More
@@ -503,7 +503,7 @@ export default function Home() {
                 <Logo className="h-12 w-auto" />
               </Link>
               <p className="text-gray-400 text-sm mb-6">
-                VENEGAS LOGISTICS is a quality focused 3PL with great technology, lean operating processes, happy clients and a vibrant culture.
+                JV LOGISTICS GROUP is a quality focused 3PL with great technology, lean operating processes, happy clients and a vibrant culture.
               </p>
               <div className="flex gap-4">
                 <div className="w-10 h-10 bg-gray-800 rounded-full" />
@@ -537,7 +537,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold mb-4 text-lg">Location</h3>
               <div className="text-sm text-gray-400 mb-6">
-                <div className="font-medium text-white mb-2">VENEGAS LOGISTICS</div>
+                <div className="font-medium text-white mb-2">JV LOGISTICS GROUP</div>
                 <div>2001 N 23rd Ave</div>
                 <div>Phoenix, AZ 85009</div>
               </div>
@@ -550,7 +550,7 @@ export default function Home() {
           </div>
 
           <div className="pt-8 border-t border-gray-800 flex flex-wrap justify-between items-center text-sm text-gray-400">
-            <div>© 2025 VENEGAS LOGISTICS LLC. All Rights are Reserved.</div>
+            <div>© 2025 JV LOGISTICS GROUP LLC. All Rights are Reserved.</div>
             <div className="flex gap-6">
               <Link href="#" className="hover:text-white">Disclaimer</Link>
               <Link href="#" className="hover:text-white">Terms</Link>
