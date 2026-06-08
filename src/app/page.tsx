@@ -77,7 +77,7 @@ export default function Home() {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-4">
                 <Package className="w-10 h-10 text-blue-600" />
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">2000 Pallet Slots Available</div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">1000 Pallet Slots Available</div>
               <div className="text-gray-600">Store with us Today!</div>
             </div>
             <div className="text-center">

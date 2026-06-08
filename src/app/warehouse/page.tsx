@@ -44,39 +44,11 @@ export default function WarehousePage() {
   const [storageSpaces, setStorageSpaces] = useState<Record<string, StorageSpace>>(() => {
     const spaces: Record<string, StorageSpace> = {};
 
-    // R Zones (R1-R22) - each has multiple spaces
-    for (let r = 1; r <= 22; r++) {
-      for (let s = 1; s <= 10; s++) {
-        const id = `R${r}-${s}`;
-        spaces[id] = { id, zone: `R${r}`, status: "available" };
-      }
-    }
-
-    // ZONE S (left side grid)
-    const zoneS = ["Z", "O", "N", "E", "S", "G"];
-    for (let row = 0; row < zoneS.length; row++) {
-      for (let col = 1; col <= 32; col++) {
-        const id = `S-${zoneS[row]}${col}`;
-        spaces[id] = { id, zone: "ZONE-S", status: "available" };
-      }
-    }
-
-    // ZONE 1, 2, 3 (main vertical lanes)
-    for (let z = 1; z <= 3; z++) {
-      for (let lane = 1; lane <= 7; lane++) {
-        for (let pos = 1; pos <= 20; pos++) {
-          const id = `Z${z}-L${lane}-${pos}`;
-          spaces[id] = { id, zone: `ZONE-${z}`, status: "available" };
-        }
-      }
-    }
-
-    // ZONE 4 (bottom right)
-    const zone4 = ["Z", "O", "N", "E"];
-    for (let row = 0; row < zone4.length; row++) {
-      for (let col = 1; col <= 14; col++) {
-        const id = `4-${zone4[row]}${col}`;
-        spaces[id] = { id, zone: "ZONE-4", status: "available" };
+    // 5 zones, 200 pallet spaces each (4ft x 4ft) = 1000 total
+    for (let z = 1; z <= 5; z++) {
+      for (let i = 1; i <= 200; i++) {
+        const id = `Z${z}-${String(i).padStart(3, "0")}`;
+        spaces[id] = { id, zone: `Zone ${z}`, status: "available" };
       }
     }
 
@@ -250,10 +222,13 @@ export default function WarehousePage() {
       </header>
 
       {/* Main Content */}
-      <div className="max-w-[1800px] mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">Warehouse Storage Management</h1>
-          <p className="text-gray-600">Click on any available (green) space to book it</p>
+          <p className="text-gray-600">
+            1,000 pallet spaces across 5 zones (200 per zone). Each space is a 4ft × 4ft pallet
+            position — click any available (green) space to book it.
+          </p>
 
           {/* Legend */}
           <div className="flex gap-6 mt-4">
@@ -278,131 +253,32 @@ export default function WarehousePage() {
           </div>
         </div>
 
-        {/* Warehouse Layout */}
-        <div className="bg-white rounded-lg shadow-lg p-8 overflow-x-auto">
-          <div className="min-w-[1600px]">
-            {/* R Zones Header (R1-R22) */}
-            <div className="flex gap-1 mb-4">
-              {Array.from({ length: 22 }, (_, i) => (
-                <div key={i} className="flex flex-col items-center">
-                  <div className="text-xs font-bold mb-2 w-20 text-center border-b-2 border-gray-300 pb-1">
-                    R{i + 1}
-                  </div>
-                  <div className="flex flex-col gap-0.5">
-                    {Array.from({ length: 10 }, (_, s) => renderSpace(`R${i + 1}-${s + 1}`, true))}
-                  </div>
+        {/* Warehouse Layout — 5 zones, 200 pallet spaces (4ft x 4ft) each */}
+        <div className="space-y-6">
+          {[1, 2, 3, 4, 5].map((z) => {
+            const zoneSpaces = Object.values(storageSpaces).filter((s) => s.zone === `Zone ${z}`);
+            const available = zoneSpaces.filter((s) => s.status === "available").length;
+            return (
+              <div key={z} className="bg-white rounded-lg shadow-lg p-6">
+                <div className="flex items-center justify-between mb-4 border-b-2 border-gray-200 pb-2">
+                  <h2 className="text-xl font-bold text-gray-900">Zone {z}</h2>
+                  <span className="text-sm text-gray-600">
+                    <span className="font-semibold text-green-600">{available}</span> of 200 available
+                  </span>
                 </div>
-              ))}
-            </div>
-
-            <div className="flex gap-8">
-              {/* Left Section - ZONE S */}
-              <div className="flex flex-col gap-8">
-                {/* ZONE S Upper Grid */}
-                <div className="border-2 border-gray-400 p-4">
-                  <div className="flex gap-0.5">
-                    <div className="flex flex-col gap-0.5">
-                      {["Z", "O", "N", "E", "S", "G"].map((letter, idx) => (
-                        <div key={idx} className="flex items-center justify-center w-8 h-8 font-bold text-sm">
-                          {letter}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="grid grid-rows-6 gap-0.5">
-                      {["Z", "O", "N", "E", "S", "G"].map((letter, row) => (
-                        <div key={row} className="flex gap-0.5">
-                          {Array.from({ length: 22 }, (_, col) => renderSpace(`S-${letter}${col + 1}`, true))}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* ZONE S Lower Grid */}
-                <div className="border-2 border-gray-400 p-4">
-                  <div className="flex gap-0.5">
-                    <div className="flex flex-col gap-0.5">
-                      {["Z", "O", "N", "E", "S", "G"].map((letter, idx) => (
-                        <div key={idx} className="flex items-center justify-center w-8 h-8 font-bold text-sm">
-                          {letter}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="grid grid-rows-6 gap-0.5">
-                      {["Z", "O", "N", "E", "S", "G"].map((letter, row) => (
-                        <div key={row} className="flex gap-0.5">
-                          {Array.from({ length: 10 }, (_, col) => renderSpace(`S-${letter}${col + 23}`, true))}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Office and Restroom */}
-                <div className="flex flex-col gap-2">
-                  <div className="border-2 border-gray-800 bg-blue-50 p-4 text-center font-bold">
-                    RESTROOM
-                  </div>
-                  <div className="border-2 border-gray-800 bg-blue-50 p-4 text-center font-bold">
-                    OFFICE
+                <div className="overflow-x-auto">
+                  <div
+                    className="grid gap-1 w-max"
+                    style={{ gridTemplateColumns: "repeat(20, minmax(0, 1fr))" }}
+                  >
+                    {Array.from({ length: 200 }, (_, i) =>
+                      renderSpace(`Z${z}-${String(i + 1).padStart(3, "0")}`, true)
+                    )}
                   </div>
                 </div>
               </div>
-
-              {/* Main Storage Zones 1, 2, 3 */}
-              <div className="flex gap-8 flex-1">
-                {[1, 2, 3].map((zoneNum) => (
-                  <div key={zoneNum} className="flex-1 border-2 border-gray-400 p-4">
-                    <div className="text-center font-bold mb-4 text-lg border-b-2 border-gray-300 pb-2">
-                      ZONE {zoneNum}
-                    </div>
-                    <div className="flex gap-1">
-                      {Array.from({ length: 7 }, (_, lane) => (
-                        <div key={lane} className="flex flex-col gap-0.5">
-                          {Array.from({ length: 20 }, (_, pos) => renderSpace(`Z${zoneNum}-L${lane + 1}-${pos + 1}`, true))}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Right Section - ZONE 4 */}
-              <div className="flex flex-col justify-center">
-                <div className="border-2 border-gray-400 p-4">
-                  <div className="flex gap-0.5">
-                    <div className="flex flex-col gap-0.5">
-                      {["Z", "O", "N", "E"].map((letter, idx) => (
-                        <div key={idx} className="flex items-center justify-center w-8 h-8 font-bold text-sm">
-                          {letter}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="grid grid-rows-4 gap-0.5">
-                      {["Z", "O", "N", "E"].map((letter, row) => (
-                        <div key={row} className="flex gap-0.5">
-                          {Array.from({ length: 14 }, (_, col) => renderSpace(`4-${letter}${col + 1}`, true))}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="text-center font-bold mt-2 text-sm">ZONE 4</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Loading Docks */}
-            <div className="flex justify-center gap-32 mt-8">
-              <div className="flex flex-col items-center">
-                <div className="w-16 h-32 border-4 border-gray-600 bg-gray-200 rounded-t-lg"></div>
-                <div className="text-sm font-bold mt-2">DOCK 1</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-16 h-32 border-4 border-gray-600 bg-gray-200 rounded-t-lg"></div>
-                <div className="text-sm font-bold mt-2">DOCK 2</div>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
 
