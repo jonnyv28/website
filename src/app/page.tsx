@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Package, TrendingUp, Truck, ShoppingCart, Cog, Box, Store } from "lucide-react";
+import { Package, TrendingUp, Truck, ShoppingCart, Cog, Box, Store, CalendarCheck, CheckCircle2, ArrowRight } from "lucide-react";
 import { Logo } from "@/components/Logo";
 import { ServicesSection } from "@/components/ServicesSection";
 import { ContactForm } from "@/components/ContactForm";
@@ -163,26 +163,53 @@ export default function Home() {
       {/* Video & Technology Combined Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="text-center mb-12">
             <p className="text-blue-100 uppercase tracking-wide text-sm mb-4">JV LOGISTICS GROUP 3PL FULFILLMENT</p>
-            <h2 className="text-4xl font-bold mb-4">Where Is Our Merchandise? Take A Look At How We Store Your Freight.</h2>
+            <h2 className="text-4xl font-bold mb-4">How It Works — From Booking to Delivery</h2>
             <p className="text-blue-100 text-lg max-w-3xl mx-auto">
-              Time is money in ecommerce. Our proven fulfillment solutions help you ship faster, reduce errors, and deliver on customer expectations every time.
+              Time is money in ecommerce. Here&apos;s how we store, handle, and ship your freight — fast, accurate, and on time, every time.
             </p>
           </div>
-          <div className="max-w-2xl mx-auto mt-12 mb-16">
-            <div className="relative aspect-video bg-gray-900 rounded-lg shadow-2xl overflow-hidden">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="JV Logistics Group Facility Tour"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+            {/* Step 1 */}
+            <div className="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 hover:-translate-y-1 transition-all duration-300">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-white text-blue-600 flex items-center justify-center font-bold text-lg shadow-lg">1</div>
+              <ShoppingCart className="w-9 h-9 mx-auto mb-3 text-white group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-bold mb-2">Pick Your Service</h3>
+              <p className="text-blue-100 text-sm">Choose from storage, crossdocking, fulfillment, delivery and more — all in one place.</p>
             </div>
-            <p className="text-center text-blue-100 mt-4 text-sm">
-              Replace this video URL with your actual facility tour video
-            </p>
+
+            {/* Step 2 */}
+            <div className="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 hover:-translate-y-1 transition-all duration-300">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-white text-blue-600 flex items-center justify-center font-bold text-lg shadow-lg">2</div>
+              <CalendarCheck className="w-9 h-9 mx-auto mb-3 text-white group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-bold mb-2">Book Online in Minutes</h3>
+              <p className="text-blue-100 text-sm">Select your dates and details with our simple booking wizard — no phone calls needed.</p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 hover:-translate-y-1 transition-all duration-300">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-white text-blue-600 flex items-center justify-center font-bold text-lg shadow-lg">3</div>
+              <Truck className="w-9 h-9 mx-auto mb-3 text-white group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-bold mb-2">We Handle Your Freight</h3>
+              <p className="text-blue-100 text-sm">We receive, store, pick, pack, and ship your product accurately and on schedule.</p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 hover:-translate-y-1 transition-all duration-300">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-white text-blue-600 flex items-center justify-center font-bold text-lg shadow-lg">4</div>
+              <CheckCircle2 className="w-9 h-9 mx-auto mb-3 text-white group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-bold mb-2">Confirmed by Email</h3>
+              <p className="text-blue-100 text-sm">Get instant confirmation and updates, so you always know where your freight stands.</p>
+            </div>
+          </div>
+
+          <div className="text-center mb-16">
+            <Link href="/booking" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 shadow-lg transition">
+              Book a Service Now
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
 
           {/* Technology Preview */}
@@ -270,53 +297,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="h-1 bg-gradient-to-r from-transparent via-blue-600 to-transparent"></div>
 
-      {/* Video & Technology Combined Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <p className="text-blue-100 uppercase tracking-wide text-sm mb-4">JV LOGISTICS GROUP 3PL FULFILLMENT</p>
-            <h2 className="text-4xl font-bold mb-4">Where Is Our Merchandise? Take A Look At How We Store Your Freight.</h2>
-            <p className="text-blue-100 text-lg max-w-3xl mx-auto">
-              Time is money in ecommerce. Our proven fulfillment solutions help you ship faster, reduce errors, and deliver on customer expectations every time.
-            </p>
-          </div>
-          <div className="max-w-2xl mx-auto mt-12 mb-16">
-            <div className="relative aspect-video bg-gray-900 rounded-lg shadow-2xl overflow-hidden">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="JV Logistics Group Facility Tour"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-            <p className="text-center text-blue-100 mt-4 text-sm">
-              Replace this video URL with your actual facility tour video
-            </p>
-          </div>
-
-          {/* Technology Preview */}
-          <div className="text-center mt-20 mb-8">
-            <h3 className="text-3xl font-bold mb-4">Take a look at our storage lanes</h3>
-            <p className="text-xl text-blue-100">Simple. Fast. Reliable.</p>
-          </div>
-          <div className="relative max-w-5xl mx-auto">
-            <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
-              <img
-                src="https://ugc.same-assets.com/YpqDWkBo4SS09PujpdNEjct5dBVM5OIT.jpeg"
-                alt="JV Logistics Group warehouse storage lanes with organized pallets"
-                className="w-full h-auto"
-              />
-            </div>
-            <p className="text-center text-blue-100 mt-6 text-lg">
-              Our organized warehouse facility with clearly marked storage lanes
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Divider */}
       <div className="h-1 bg-gradient-to-r from-transparent via-blue-600 to-transparent"></div>
