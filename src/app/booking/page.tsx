@@ -1,9 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { Calendar, Package, Truck, ArrowRight, ArrowLeft, CheckCircle2, Loader2 } from "lucide-react";
+import { Suspense, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import {
+  Calendar,
+  Package,
+  Truck,
+  ShoppingCart,
+  Box,
+  ArrowRight,
+  ArrowLeft,
+  CheckCircle2,
+  type LucideIcon,
+} from "lucide-react";
 import { Logo } from "@/components/Logo";
+import { SERVICES, getService } from "@/lib/services";
 
 type BookingStep = 1 | 2 | 3 | 4;
 
@@ -20,9 +32,24 @@ interface BookingData {
   notes: string;
 }
 
-export default function Booking() {
+// Map the icon key from the service data to the actual icon component.
+const ICONS: Record<string, LucideIcon> = { ShoppingCart, Truck, Package, Box };
+
+const PRICE_PER_LANE = 20; // $20 per pallet lane per month (storage only)
+
+function monthsBetween(startDate: string, endDate: string): number {
+  if (!startDate || !endDate) return 0;
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+  const days = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+  return Math.max(1, Math.ceil(days / 30));
+}
+
+function BookingContent() {
+  const searchParams = useSearchParams();
   const [currentStep, setCurrentStep] = useState<BookingStep>(1);
   const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [bookingData, setBookingData] = useState<BookingData>({
     serviceType: "",
     laneCount: 1,
@@ -36,49 +63,48 @@ export default function Booking() {
     notes: "",
   });
 
+  // Pre-select the service when the visitor arrives from a "Book This Service" link.
+  useEffect(() => {
+    const fromUrl = searchParams.get("service");
+    if (fromUrl && getService(fromUrl)) {
+      setBookingData((prev) => ({ ...prev, serviceType: fromUrl }));
+    }
+  }, [searchParams]);
+
+  const isStorage = bookingData.serviceType === "storage";
+
   const updateBookingData = (field: keyof BookingData, value: string | number) => {
-    setBookingData(prev => ({ ...prev, [field]: value }));
+    setBookingData((prev) => ({ ...prev, [field]: value }));
   };
 
   const nextStep = () => {
-    if (currentStep < 4) {
-      setCurrentStep((currentStep + 1) as BookingStep);
-    }
+    if (currentStep < 4) setCurrentStep((currentStep + 1) as BookingStep);
   };
 
   const prevStep = () => {
-    if (currentStep > 1) {
-      setCurrentStep((currentStep - 1) as BookingStep);
-    }
+    if (currentStep > 1) setCurrentStep((currentStep - 1) as BookingStep);
   };
 
+  // Only storage has an instant calculated price. Everything else is quoted by email.
   const calculateCost = () => {
-    if (!bookingData.startDate || !bookingData.endDate) return 0;
-
-    const start = new Date(bookingData.startDate);
-    const end = new Date(bookingData.endDate);
-    const days = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
-    const months = Math.max(1, Math.ceil(days / 30));
-
-    const pricePerLane = 20; // $20 per lane per month
-    return bookingData.laneCount * pricePerLane * months;
+    if (!isStorage) return 0;
+    const months = monthsBetween(bookingData.startDate, bookingData.endDate);
+    return bookingData.laneCount * PRICE_PER_LANE * months;
   };
 
   const handleSubmit = async () => {
     setSubmitting(true);
     try {
-      const start = new Date(bookingData.startDate);
-      const end = new Date(bookingData.endDate);
-      const days = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
-      const months = Math.max(1, Math.ceil(days / 30));
-      const pricePerMonth = 20;
-      const totalPrice = bookingData.laneCount * pricePerMonth * months;
+      const months = monthsBetween(bookingData.startDate, bookingData.endDate);
+      const pricePerMonth = isStorage ? PRICE_PER_LANE : 0;
+      const laneCount = isStorage ? bookingData.laneCount : 1;
+      const totalPrice = isStorage ? laneCount * pricePerMonth * months : 0;
 
       const response = await fetch("/api/bookings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          spaceId: `LANE-${Date.now()}`,
+          spaceId: `${bookingData.serviceType.toUpperCase()}-${Date.now()}`,
           firstName: bookingData.firstName,
           lastName: bookingData.lastName,
           company: bookingData.company,
@@ -88,7 +114,7 @@ export default function Booking() {
           startDate: bookingData.startDate,
           endDate: bookingData.endDate,
           duration: months,
-          laneCount: bookingData.laneCount,
+          laneCount,
           pricePerMonth,
           totalPrice,
           notes: bookingData.notes,
@@ -98,7 +124,7 @@ export default function Booking() {
       const data = await response.json();
 
       if (data.success) {
-        setCurrentStep(4);
+        setSubmitted(true);
       } else {
         alert("Failed to submit booking. Please try again.");
       }
@@ -108,6 +134,56 @@ export default function Booking() {
     }
     setSubmitting(false);
   };
+
+  const selectedService = getService(bookingData.serviceType);
+
+  // Success screen — shown after a booking request is submitted.
+  if (submitted) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+        <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center h-16">
+              <Link href="/" className="flex items-center">
+                <Logo className="h-12 w-auto" />
+              </Link>
+            </div>
+          </div>
+        </header>
+
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 text-center">
+            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle2 className="w-12 h-12 text-green-600" />
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Booking Request Received!</h2>
+            <p className="text-gray-600 mb-2">
+              Thanks, {bookingData.firstName || "there"} — your request for{" "}
+              <span className="font-semibold">{selectedService?.name ?? "your service"}</span> is in.
+            </p>
+            <p className="text-gray-600 mb-8">
+              We&apos;ll review the details and confirm everything (including final pricing) by email
+              at <span className="font-medium">{bookingData.email}</span>.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link
+                href="/"
+                className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+              >
+                Back to Home
+              </Link>
+              <Link
+                href="/#services"
+                className="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition"
+              >
+                Book Another Service
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
@@ -174,39 +250,34 @@ export default function Booking() {
           {currentStep === 1 && (
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-2">Select Your Service</h2>
-              <p className="text-gray-600 mb-8">Choose the type of storage service you need</p>
+              <p className="text-gray-600 mb-8">Choose the service you'd like to book</p>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <button
-                  onClick={() => updateBookingData("serviceType", "storage")}
-                  className={`p-6 rounded-xl border-2 transition-all ${
-                    bookingData.serviceType === "storage"
-                      ? "border-blue-600 bg-blue-50"
-                      : "border-gray-200 hover:border-blue-300"
-                  }`}
-                >
-                  <Package className="w-12 h-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Pallet Storage</h3>
-                  <p className="text-gray-600 mb-4">Long-term pallet storage with easy access</p>
-                  <div className="text-2xl font-bold text-blue-600">$20/pallet/month</div>
-                </button>
-
-                <button
-                  onClick={() => updateBookingData("serviceType", "crossdocking")}
-                  className={`p-6 rounded-xl border-2 transition-all ${
-                    bookingData.serviceType === "crossdocking"
-                      ? "border-blue-600 bg-blue-50"
-                      : "border-gray-200 hover:border-blue-300"
-                  }`}
-                >
-                  <Truck className="w-12 h-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Crossdocking</h3>
-                  <p className="text-gray-600 mb-4">Same-day transfer service for your freight</p>
-                  <div className="text-2xl font-bold text-blue-600">$10/pallet</div>
-                </button>
+              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                {SERVICES.map((service) => {
+                  const Icon = ICONS[service.icon] ?? Package;
+                  const selected = bookingData.serviceType === service.id;
+                  return (
+                    <button
+                      key={service.id}
+                      onClick={() => updateBookingData("serviceType", service.id)}
+                      className={`text-left p-6 rounded-xl border-2 transition-all ${
+                        selected ? "border-blue-600 bg-blue-50" : "border-gray-200 hover:border-blue-300"
+                      }`}
+                    >
+                      <Icon className="w-10 h-10 text-blue-600 mb-3" />
+                      <h3 className="text-lg font-bold text-gray-900 mb-1">{service.name}</h3>
+                      <p className="text-sm text-gray-600 mb-3">{service.tagline}</p>
+                      <div className="text-blue-600 font-bold">
+                        {service.priceModel === "storage"
+                          ? "$20/pallet/month"
+                          : service.pricing[0]?.value ?? "Custom quote"}
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
 
-              {bookingData.serviceType === "storage" && (
+              {isStorage && (
                 <div className="mb-8">
                   <label className="block text-sm font-medium text-gray-900 mb-4">
                     How many pallet lanes do you need?
@@ -231,6 +302,13 @@ export default function Booking() {
                   </div>
                 </div>
               )}
+
+              {selectedService && selectedService.priceModel === "quote" && (
+                <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg text-sm text-gray-700">
+                  <span className="font-semibold">Heads up:</span> {selectedService.name} is priced per
+                  job — pick your dates and details next, and we'll confirm the final price by email.
+                </div>
+              )}
             </div>
           )}
 
@@ -238,13 +316,11 @@ export default function Booking() {
           {currentStep === 2 && (
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-2">Choose Your Dates</h2>
-              <p className="text-gray-600 mb-8">Select when you need the storage space</p>
+              <p className="text-gray-600 mb-8">Select when you need this service</p>
 
               <div className="space-y-6 mb-8">
                 <div>
-                  <label className="block text-sm font-medium text-gray-900 mb-2">
-                    Start Date
-                  </label>
+                  <label className="block text-sm font-medium text-gray-900 mb-2">Start Date</label>
                   <div className="relative">
                     <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <input
@@ -258,9 +334,7 @@ export default function Booking() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-900 mb-2">
-                    End Date
-                  </label>
+                  <label className="block text-sm font-medium text-gray-900 mb-2">End Date</label>
                   <div className="relative">
                     <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <input
@@ -284,7 +358,11 @@ export default function Booking() {
                       </div>
                       <div className="text-right">
                         <div className="text-sm text-gray-600">Estimated Cost</div>
-                        <div className="text-2xl font-bold text-blue-600">${calculateCost()}</div>
+                        {isStorage ? (
+                          <div className="text-2xl font-bold text-blue-600">${calculateCost()}</div>
+                        ) : (
+                          <div className="text-lg font-bold text-blue-600">Quote by email</div>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -302,9 +380,7 @@ export default function Booking() {
               <div className="space-y-6 mb-8">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-900 mb-2">
-                      First Name *
-                    </label>
+                    <label className="block text-sm font-medium text-gray-900 mb-2">First Name *</label>
                     <input
                       type="text"
                       value={bookingData.firstName}
@@ -315,9 +391,7 @@ export default function Booking() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-900 mb-2">
-                      Last Name *
-                    </label>
+                    <label className="block text-sm font-medium text-gray-900 mb-2">Last Name *</label>
                     <input
                       type="text"
                       value={bookingData.lastName}
@@ -329,9 +403,7 @@ export default function Booking() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-900 mb-2">
-                    Company Name
-                  </label>
+                  <label className="block text-sm font-medium text-gray-900 mb-2">Company Name</label>
                   <input
                     type="text"
                     value={bookingData.company}
@@ -343,9 +415,7 @@ export default function Booking() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-900 mb-2">
-                      Email *
-                    </label>
+                    <label className="block text-sm font-medium text-gray-900 mb-2">Email *</label>
                     <input
                       type="email"
                       value={bookingData.email}
@@ -356,9 +426,7 @@ export default function Booking() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-900 mb-2">
-                      Phone *
-                    </label>
+                    <label className="block text-sm font-medium text-gray-900 mb-2">Phone *</label>
                     <input
                       type="tel"
                       value={bookingData.phone}
@@ -370,9 +438,7 @@ export default function Booking() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-900 mb-2">
-                    Additional Notes
-                  </label>
+                  <label className="block text-sm font-medium text-gray-900 mb-2">Additional Notes</label>
                   <textarea
                     value={bookingData.notes}
                     onChange={(e) => updateBookingData("notes", e.target.value)}
@@ -397,9 +463,9 @@ export default function Booking() {
                   <div className="space-y-2 text-gray-700">
                     <div className="flex justify-between">
                       <span>Service Type:</span>
-                      <span className="font-medium capitalize">{bookingData.serviceType}</span>
+                      <span className="font-medium">{selectedService?.name ?? bookingData.serviceType}</span>
                     </div>
-                    {bookingData.serviceType === "storage" && (
+                    {isStorage && (
                       <div className="flex justify-between">
                         <span>Number of Lanes:</span>
                         <span className="font-medium">{bookingData.laneCount} lane{bookingData.laneCount > 1 ? 's' : ''}</span>
@@ -442,8 +508,14 @@ export default function Booking() {
 
                 <div className="p-6 bg-blue-50 rounded-lg border-2 border-blue-200">
                   <div className="flex justify-between items-center">
-                    <span className="text-lg font-bold text-gray-900">Estimated Total:</span>
-                    <span className="text-3xl font-bold text-blue-600">${calculateCost()}</span>
+                    <span className="text-lg font-bold text-gray-900">
+                      {isStorage ? "Estimated Total:" : "Pricing:"}
+                    </span>
+                    {isStorage ? (
+                      <span className="text-3xl font-bold text-blue-600">${calculateCost()}</span>
+                    ) : (
+                      <span className="text-xl font-bold text-blue-600">Confirmed by email</span>
+                    )}
                   </div>
                   <p className="text-sm text-gray-600 mt-2">Final pricing will be confirmed via email</p>
                 </div>
@@ -488,15 +560,24 @@ export default function Booking() {
             ) : (
               <button
                 onClick={handleSubmit}
-                className="flex items-center gap-2 px-8 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition"
+                disabled={submitting}
+                className="flex items-center gap-2 px-8 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition disabled:opacity-60"
               >
                 <CheckCircle2 className="w-5 h-5" />
-                Confirm Booking
+                {submitting ? "Submitting..." : "Confirm Booking"}
               </button>
             )}
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Booking() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
+      <BookingContent />
+    </Suspense>
   );
 }

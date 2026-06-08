@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Package, TrendingUp, Truck, ShoppingCart, Cog, Box, Store } from "lucide-react";
 import { Logo } from "@/components/Logo";
+import { ServicesSection } from "@/components/ServicesSection";
 import { ContactForm } from "@/components/ContactForm";
 
 export default function Home() {
@@ -96,6 +97,119 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="h-1 bg-gradient-to-r from-transparent via-blue-600 to-transparent"></div>
+
+      {/* How to Book Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-blue-600 font-medium uppercase tracking-wide text-sm mb-4">JV LOGISTICS GROUP BOOKING SYSTEM</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Book Your Storage Lane Online</h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Just like booking a plane ticket, reserve your storage lanes instantly with our simple online booking system
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                step: "1",
+                title: "Choose Your Lane",
+                description: "Browse available storage lanes just like selecting a seat on a flight. See real-time availability and pricing."
+              },
+              {
+                step: "2",
+                title: "Customize Your Needs",
+                description: "Use our simple model to customize your storage requirements. Pick your duration, size, and additional services."
+              },
+              {
+                step: "3",
+                title: "Book Instantly",
+                description: "Reserve your lane with a few clicks. Get instant confirmation and manage everything online."
+              }
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6">
+                  {item.step}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-12 text-center text-white">
+            <h3 className="text-3xl font-bold mb-4">Ready to Book Your Storage Lane?</h3>
+            <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+              Experience the easiest way to manage your storage needs. Our online booking platform makes it simple, fast, and completely customizable.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/booking" className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition">
+                Book a Lane Now
+              </Link>
+              <Link href="/services" className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-400 transition">
+                View Our Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="h-1 bg-gradient-to-r from-transparent via-blue-600 to-transparent"></div>
+
+      {/* Video & Technology Combined Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <p className="text-blue-100 uppercase tracking-wide text-sm mb-4">JV LOGISTICS GROUP 3PL FULFILLMENT</p>
+            <h2 className="text-4xl font-bold mb-4">Where Is Our Merchandise? Take A Look At How We Store Your Freight.</h2>
+            <p className="text-blue-100 text-lg max-w-3xl mx-auto">
+              Time is money in ecommerce. Our proven fulfillment solutions help you ship faster, reduce errors, and deliver on customer expectations every time.
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto mt-12 mb-16">
+            <div className="relative aspect-video bg-gray-900 rounded-lg shadow-2xl overflow-hidden">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="JV Logistics Group Facility Tour"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <p className="text-center text-blue-100 mt-4 text-sm">
+              Replace this video URL with your actual facility tour video
+            </p>
+          </div>
+
+          {/* Technology Preview */}
+          <div className="text-center mt-20 mb-8">
+            <h3 className="text-3xl font-bold mb-4">Take a look at our storage lanes</h3>
+            <p className="text-xl text-blue-100">Simple. Fast. Reliable.</p>
+          </div>
+          <div className="relative max-w-5xl mx-auto">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+              <img
+                src="https://ugc.same-assets.com/YpqDWkBo4SS09PujpdNEjct5dBVM5OIT.jpeg"
+                alt="JV Logistics Group warehouse storage lanes with organized pallets"
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-center text-blue-100 mt-6 text-lg">
+              Our organized warehouse facility with clearly marked storage lanes
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="h-1 bg-gradient-to-r from-transparent via-blue-600 to-transparent"></div>
+
+      {/* Services Section */}
+      <ServicesSection />
 
       {/* Divider */}
       <div className="h-1 bg-gradient-to-r from-transparent via-blue-600 to-transparent"></div>
