@@ -48,7 +48,9 @@ export default function WarehousePage() {
     for (let z = 1; z <= 5; z++) {
       for (let i = 1; i <= 200; i++) {
         const id = `Z${z}-${String(i).padStart(3, "0")}`;
-        spaces[id] = { id, zone: `Zone ${z}`, status: "available" };
+        // Zone 1 starts at 50% capacity: first 100 spaces are occupied
+        const status = z === 1 && i <= 100 ? "booked" : "available";
+        spaces[id] = { id, zone: `Zone ${z}`, status };
       }
     }
 
