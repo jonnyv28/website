@@ -633,8 +633,8 @@ export default function Home() {
               <h3 className="font-bold mb-4 text-lg">Location</h3>
               <div className="text-sm text-gray-400 mb-6">
                 <div className="font-medium text-white mb-2">JV LOGISTICS GROUP</div>
-                <div>2001 N 23rd Ave</div>
-                <div>Phoenix, AZ 85009</div>
+                <div>6801 N Cotton Ln</div>
+                <div>Waddell, AZ 85355</div>
               </div>
               <div className="text-sm text-gray-400">
                 <div className="font-medium text-white mb-2">Contact</div>

@@ -168,7 +168,7 @@ export async function POST(request: NextRequest) {
               </div>
               <div style="background: #1f2937; padding: 20px; text-align: center;">
                 <p style="color: #9ca3af; margin: 0; font-size: 12px;">© 2025 JV Logistics Group LLC. All Rights Reserved.</p>
-                <p style="color: #9ca3af; margin: 5px 0 0; font-size: 12px;">2001 N 23rd Ave, Phoenix, AZ 85009</p>
+                <p style="color: #9ca3af; margin: 5px 0 0; font-size: 12px;">6801 N Cotton Ln, Waddell, AZ 85355</p>
               </div>
             </div>
           `,
