@@ -26,7 +26,7 @@ function ServiceIcon({ name, className }: { name: string; className?: string }) 
   return <Icon className={className} />;
 }
 
-export function ServicesSection() {
+export function ServicesSection({ showHeader = true }: { showHeader?: boolean }) {
   const [selected, setSelected] = useState<ServiceInfo | null>(null);
 
   // Let the visitor close the popup with the Escape key.
@@ -42,16 +42,18 @@ export function ServicesSection() {
   return (
     <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="text-blue-600 font-medium uppercase tracking-wide text-sm mb-4">
-            JV LOGISTICS GROUP SERVICES
-          </p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Professional 3PL Solutions</h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Comprehensive logistics services tailored to your business needs. Click any service to
-            learn more and book it.
-          </p>
-        </div>
+        {showHeader && (
+          <div className="text-center mb-16">
+            <p className="text-blue-600 font-medium uppercase tracking-wide text-sm mb-4">
+              JV LOGISTICS GROUP SERVICES
+            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Professional 3PL Solutions</h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Comprehensive logistics services tailored to your business needs. Click any service to
+              learn more and book it.
+            </p>
+          </div>
+        )}
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service) => {
